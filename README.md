@@ -559,7 +559,7 @@ def scan_path(ph):
     file_list = os.listdir(ph)
     for obj in file_list:
         if os.path.isfile(obj):
-    pick(obj)
+            pick(obj)
         elif os.path.isdir(obj):
             scan_path(obj)
     
@@ -586,7 +586,7 @@ count = sum(range(0,101))
 print(count)
 ```
 ### 21.Python-遍历列表时删除元素的正确做法
-遍历在新在列表操作，删除时在原来的列表操作
+遍历在新列表操作，删除时在原来列表操作
 ```python
 a = [1,2,3,4,5,6,7,8]
 print(id(a))
@@ -651,7 +651,7 @@ print(a)
 ```python
 def get_missing_letter(a):
     s1 = set("abcdefghijklmnopqrstuvwxyz")
-    s2 = set(a)
+    s2 = set(a.lower())
     ret = "".join(sorted(s1-s2))
     return ret
     
