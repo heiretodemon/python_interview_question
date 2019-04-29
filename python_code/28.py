@@ -29,6 +29,7 @@ def atoi3(s):
     return reduce(lambda num, i: num * 10 + ord(i) - ord('0'), s , 0)
 
 
+
 if __name__ == '__main__':
     s = "432"
     #print(type(s))
