@@ -750,9 +750,9 @@ class Solution:
             if target-nums[size] in d:
                 if d[target-nums[size]] <size:
                     return [d[target-nums[size]],size]
-                else:
-                    d[nums[size]] = size
-                size = size +1
+            else:
+                d[nums[size]] = size
+            size = size +1
 solution = Solution()
 list = [2,7,11,15]
 target = 9
@@ -785,6 +785,7 @@ def distFunc3(a):
     """使用字典"""
     b = {}
     b = b.fromkeys(a)
+    #转化为字典类型，在此方向转换过程中不允许同类型key对应多个value,当发生冲突时，取最后的赋值，且其value均为None
     c = list(b.keys())
     print(c)
 

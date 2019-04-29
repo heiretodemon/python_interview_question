@@ -14,8 +14,9 @@ def del_overlap2(ls):
 def del_overlap3(ls):
     # 字典
     temp = {}
-    temp = temp.fromkeys(ls)
-    l3 = list(temp.keys())
+    temp = temp.fromkeys(ls, None) 
+    #转化为字典类型，在此方向转换过程中不允许同类型key对应多个value,当发生冲突时，取最后的赋值，且其value均为None
+    l3 = list(temp.keys())  # 返回所有的key
     print(l3)
     
 if __name__ == "__main__":
