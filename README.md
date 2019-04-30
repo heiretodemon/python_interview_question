@@ -737,6 +737,7 @@ def atoi(s):
 ### 29.Given an array of integers
 给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。示例:给定nums = [2,7,11,15],target=9 因为 nums[0]+nums[1] = 2+7 =9,所以返回[0,1]
 ```python
+# 方法1
 class Solution:
     def twoSum(self,nums,target):
         """
@@ -758,6 +759,23 @@ list = [2,7,11,15]
 target = 9
 nums = solution.twoSum(list,target)
 print(nums)
+
+# 方法2
+from typing import List 
+# 用于类型检查，防止运行时出现参数与返回值不符合
+def two_sum(nums: List[int], target:int) -> List[int]:
+    s = {}
+    for i, n in enumerate(nums):
+        if (target - n) in s :
+            return [s[target - n], i]
+        else:
+            s[n] = i
+
+if __name__ == "__main__":
+    num = [2, 7, 2, 11, 15]
+    target = 9
+    nums = two_sum(num, target)
+    print(nums)
 ```
 给列表中的字典排序：假设有如下list对象，alist=[{"name":"a","age":20},{"name":"b","age":30},{"name":"c","age":25}],将alist中的元素按照age从大到小排序 alist=[{"name":"a","age":20},{"name":"b","age":30},{"name":"c","age":25}]
 ```python
@@ -840,7 +858,8 @@ def test2(filepath):
 def num_list(num):
     return [i for i in num if i %2 ==0 and num.index(i)%2==0]
 
-num = [0,1,2,3,4,5,6,7,8,9,10]
+
+
 result = num_list(num)
 print(result)
 ```
