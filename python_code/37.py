@@ -13,4 +13,4 @@ def func2(l):
 
 if __name__ == '__main__':
     l = '1982376455'
-    func2(l)
+    func1(l)
