@@ -762,7 +762,7 @@ print(nums)
 
 # 方法2
 from typing import List 
-# 用于类型检查，防止运行时出现参数与返回值不符合
+# 用于类型检查，防止运行时出现参数与返回值不符合,参考https://www.cnblogs.com/cwp-bg/p/7825729.html
 def two_sum(nums: List[int], target:int) -> List[int]:
     s = {}
     for i, n in enumerate(nums):
