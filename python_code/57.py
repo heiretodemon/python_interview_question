@@ -1,5 +1,7 @@
 import datetime
 
+# 参考链接：https://foofish.net/python-decorator.html
+
 class TimeException(Exception):
     def __init__(self, exception_info):
         super().__init__()
