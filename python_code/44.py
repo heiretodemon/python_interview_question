@@ -13,7 +13,7 @@ class Test:
     def __getitem__(self, key):
         return self.__list[key]
 
-    def len(sefl):
+    def len(self):
         return len(self.__list)
 
     def Add(self, value):
