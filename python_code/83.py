@@ -42,3 +42,21 @@ def print_name(name):
 
 if __name__ == "__main__":
     print (print_name('world'))
+    print(print_name.__name__)
+    # 装饰器覆写了print_name的__name__, __doc__, __modual__三个属性
+
+    # 如何改回来
+    '''
+    from functools import wrap
+
+    def add_symbol(symbol):
+        def decorator(func1):
+            @wrap(func)
+            def prt_func(name):
+                return '{0}&&&{1}&&&{0}'.format(symbol, func1(name))
+            return prt_func
+        return decorator
+
+    print(print_name('world'))
+    结果： print_name
+    '''
